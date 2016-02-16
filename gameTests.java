@@ -75,12 +75,67 @@ public class gameTests {
     assertFalse(game.checkValid("",tnode));
   }
   
+  //tests that look puts an item in the inventory if available
   @Test
-  public void look()
+  public void lookTest()
   {
    CoffeeMakerQuest game= new CoffeeMakerQuest();
    Node tnode=game.changeRoom(0);
+   int pos=0;
    
-   
+   while(pos<6)
+   {
+     tnode=game.changeRoom(pos);
+     game.setIngredient("coffee",false);
+     game.setIngredient("sugar",false);
+     game.setIngredient("cream",false);
+     
+     game.look(tnode);
+     if(tnode.ingredient.equals("coffee"))
+       assertTrue(game.coffee());
+     else if(tnode.ingredient.equals("sugar"))
+       assertTrue(game.sugar());
+     else if(tnode.ingredient.equals("cream"))
+       assertTrue(game.cream());
+     else
+     {
+       assertFalse(game.coffee());
+       assertFalse(game.sugar());
+       assertFalse(game.cream());
+     }
+     
+     pos++;
+   }
+  }
+  
+  //tests to see if the inventory works, as well as the setIngredient commands
+  @Test
+  public void inventoryTest()
+  {
+    CoffeeMakerQuest game= new CoffeeMakerQuest();
+    Node tnode=game.changeRoom(0);
+    game.setIngredient("coffee",false);
+    assertFalse(game.coffee());
+    
+    game.setIngredient("sugar",false);
+    assertFalse(game.sugar());
+    
+    game.setIngredient("cream",false);
+    assertFalse(game.cream());
+    
+    game.setIngredient("coffee",true);
+    assertTrue(game.coffee());
+    
+    game.setIngredient("sugar",true);
+    assertTrue(game.sugar());
+    
+    game.setIngredient("cream",true);
+    assertTrue(game.cream());
+  }
+  
+  @Test
+  public void drinkTest()
+  {
+    
   }
 }

@@ -208,4 +208,28 @@ public class CoffeeMakerQuest
     Node tnode = bList.get(pos);
     return tnode;
   }
+  
+  public Boolean sugar()
+  {
+    return sugar;
+  }
+  public Boolean coffee()
+  {
+    return coffee;
+  }
+  public Boolean cream()
+  {
+    return cream;
+  }
+  
+  public void setIngredient(String ingred, Boolean val)
+  {
+    ingred=ingred.toLowerCase();
+    if(ingred.equals("coffee"))
+      coffee=val;
+    if(ingred.equals("sugar"))
+      sugar=val;
+    if(ingred.equals("cream"))
+      cream=val;
+  }
 }
