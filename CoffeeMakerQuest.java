@@ -202,6 +202,7 @@ public class CoffeeMakerQuest
     System.exit(0);
   }
   
+  
   public Node changeRoom(int roomNo)
   {
     pos=roomNo;

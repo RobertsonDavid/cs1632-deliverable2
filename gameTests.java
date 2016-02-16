@@ -133,9 +133,17 @@ public class gameTests {
     assertTrue(game.cream());
   }
   
+  //tests to see if drinking the right ingredients will make you win
+  //tests to see if drinking the wring ingredients will make you lose
   @Test
   public void drinkTest()
   {
+    CoffeeMakerQuest game= new CoffeeMakerQuest();
+    Node tnode=game.changeRoom(0);
     
+    game.setIngredient("coffee",false);
+    game.setIngredient("sugar",false);
+    game.setIngredient("cream",false);
+   
   }
 }
