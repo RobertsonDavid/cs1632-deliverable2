@@ -144,6 +144,18 @@ public class gameTests {
     game.setIngredient("coffee",false);
     game.setIngredient("sugar",false);
     game.setIngredient("cream",false);
-   
+    
+    assertFalse(game.drink());
+    
+    game.setIngredient("coffee",true);
+    assertFalse(game.drink());
+    
+    game.setIngredient("sugar",true);
+    assertFalse(game.drink());
+    
+    game.setIngredient("cream",true);
+    assertTrue(game.drink());
+    
+    
   }
 }

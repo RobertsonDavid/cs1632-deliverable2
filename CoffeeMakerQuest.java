@@ -144,7 +144,7 @@ public class CoffeeMakerQuest
     else if(input.equals("d"))
     {
       drink();
-      return true;
+      System.exit(0);
     }
     else
       System.out.println("What?");
@@ -193,13 +193,19 @@ public class CoffeeMakerQuest
       sugar=true;
   }
   
-  public void drink()
+  public Boolean drink()
   {
     if(coffee==true && cream==true && sugar==true)
+    {
       System.out.println("You Win!");
+      return true;
+    }
     else
+    {
       System.out.println("You Lose!");
-    System.exit(0);
+      return false;
+    }
+    
   }
   
   
