@@ -75,5 +75,12 @@ public class gameTests {
     assertFalse(game.checkValid("",tnode));
   }
   
-  
+  @Test
+  public void look()
+  {
+   CoffeeMakerQuest game= new CoffeeMakerQuest();
+   Node tnode=game.changeRoom(0);
+   
+   
+  }
 }

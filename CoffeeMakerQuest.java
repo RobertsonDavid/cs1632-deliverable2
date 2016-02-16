@@ -201,4 +201,11 @@ public class CoffeeMakerQuest
       System.out.println("You Lose!");
     System.exit(0);
   }
+  
+  public Node changeRoom(int roomNo)
+  {
+    pos=roomNo;
+    Node tnode = bList.get(pos);
+    return tnode;
+  }
 }
