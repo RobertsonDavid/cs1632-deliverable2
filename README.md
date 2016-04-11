@@ -1,2 +1,1 @@
-# School-Work
-Unfinished or not yet due
+Project creates tests to ensure that the coffeequest game works properly.
