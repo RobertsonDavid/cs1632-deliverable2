@@ -1,5 +1,5 @@
 Project creates tests to ensure that the coffeequest game works properly.
-
+Tests to make sure the requirements are met
 
 Requirements for Coffee Maker Quest
 
